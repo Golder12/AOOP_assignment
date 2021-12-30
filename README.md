@@ -39,7 +39,22 @@ Students' issues will be solved by enabling them to;
 
 ### Models Involved
 
+The major models involved that result into database tables include;
+1. Students.
+2. StudentClass.
+3. Timetables.
+4. Subjects.
+5. Teachers.
+
+Some of the relationships between the above models are derived into associative tables that include;
+1. SubjectsClass. It stands in for the many to many relationship between the StudentClass and Subjects model.
+2. StudentsSubjectsClass. It stores marks that are attached to a specific Student, StudentClass and Subject.
+
 ### Database Design
+
+The Database Design below describes the relationships of the above models:
+
+![DB Design](DB.png "Database Design")
 
 ## How to Run it
 
