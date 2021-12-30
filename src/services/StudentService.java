@@ -14,26 +14,38 @@ import models.Subject;
 public interface StudentService {
 	
 	/*
-	 * This method saves a student
+	 * Saves a student
 	 */
 	void saveStudent(Student student) throws SQLException;
 	
 	
 	/*
-	 * This method gets all saved students
+	 * Gets all saved students
 	 */
 	List<Student> getAllStudents() throws SQLException;
 	
 	
 	/*
-	 * This method shows a timetable for a certain class
+	 * Shows a timetable for a certain class
 	 */
 	void showClassTimetable();
 	
+	
+	/*
+	 * Gets Students of a particular class 
+	 * registered for a particular subject
+	 */
 	List<Student> getStudentsOfClassAndSubject();
 	
+	/*
+	 * Gets student of a provided registration
+	 * Number
+	 */
 	Student getStudentOfRegNo(String registrationNumber);
 	
+	/*
+	 * Saves a student's mark in a particula
+	 */
 	void saveStudentMark(Student student);
 	
 	boolean loginStudent(Student student);
