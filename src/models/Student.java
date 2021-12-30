@@ -2,16 +2,24 @@ package models;
 
 import java.util.List;
 
+/**
+ * This model describes the 'Student'
+ * entity and the attributes it can hold.
+ * 
+ * The Student entity represents a student
+ * in Katikamu primary school
+ * 
+ *
+ */
 public class Student {
 	
-	private int id;
-	private String firstName;
-	private String lastName;
-	private String registrationNumber;
-	private char gender;
-	private int age;
-	private List<Subject> subjects;
-	private StudentClass studentClass;
+	private String firstName;				//first name of a student
+	private String lastName;				//last name of a student
+	private String registrationNumber;		//registration Number of a student
+	private char gender;					//gender of the student
+	private int age;						//age of the student
+	private List<Subject> subjects;			//subjects being learned by the student
+	private StudentClass studentClass;		//class of the student
 	/**
 	 * @return the firstName
 	 */
@@ -73,18 +81,6 @@ public class Student {
 		this.age = age;
 	}
 
-	/**
-	 * @return the id
-	 */
-	public int getId() {
-		return id;
-	}
-	/**
-	 * @param id the id to set
-	 */
-	public void setId(int id) {
-		this.id = id;
-	}
 	
 	/**
 	 * @return the subjects
@@ -114,14 +110,10 @@ public class Student {
 	
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
-<<<<<<< HEAD
+
 		String toDisplay = lastName + firstName;
 		
 		return toDisplay;
-=======
-		return firstName;
->>>>>>> e5258a11d0dd28cdf991a303ef4e4ed2f34c8595
 	}
 	
 }

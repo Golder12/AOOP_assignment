@@ -1,13 +1,8 @@
-<<<<<<< HEAD
-.idea
 .git
-.classpath
-.project
-.settings
-=======
 bin/
 .idea/
 .settings/
 .classpath
 .project
->>>>>>> e5258a11d0dd28cdf991a303ef4e4ed2f34c8595
+*.iml
+

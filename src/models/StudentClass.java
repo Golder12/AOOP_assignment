@@ -2,10 +2,19 @@ package models;
 
 import java.util.List;
 
+/**
+ * 
+ *  This model describes the 'StudentClass'
+ * entity and the attributes it can hold.
+ * 
+ * The StudentClass entity represents a 
+ * learning class in Katikamu primary school
+ *
+ */
 public class StudentClass {
 	
-	private String name;
-	private List<Subject> subjects;
+	private String name;			//name of the class
+	private List<Subject> subjects;	//subjects taught in the class
 
 	/**
 	 * @return the name

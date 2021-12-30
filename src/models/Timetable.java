@@ -1,39 +1,29 @@
 package models;
 
+/**
+ * 
+ *  This model describes the 'Timetable'
+ * entity and the attributes it can hold.
+ * 
+ * The Timetable entity represents a 
+ * a timetable of a given class in Katikamu primary school
+ *
+ */
 public class Timetable {
 	
-	private StudentClass studentClass;
+	private StudentClass studentClass; 	//class to which the timetable belongs
+	private String timeOfTeaching; 		//time period of a lesson
+	private Subject subject;			//particular subject taught in the class
 	
-	private String timeOfTeaching;
-	
-	private String Monday;
-	
+	//The following are attributes representing a particular
+	//day of the week on which learning takes place.
+	private String Monday; 
 	private String Tuesday;
-	
 	private String Wednesday;
-	
 	private String Thursday;
-	
 	private String Friday;
 	
-	private Subject subject;
-
-	public String getThursday() {
-		return Thursday;
-	}
-
-	public void setThursday(String thursday) {
-		Thursday = thursday;
-	}
-
-	public String getFriday() {
-		return Friday;
-	}
-
-	public void setFriday(String friday) {
-		Friday = friday;
-	}
-
+	
 	/**
 	 * @return the studentClass
 	 */
@@ -116,6 +106,34 @@ public class Timetable {
 	 */
 	public void setSubject(Subject subject) {
 		this.subject = subject;
+	}
+
+	/**
+	 * @return the thursday
+	 */
+	public String getThursday() {
+		return Thursday;
+	}
+
+	/**
+	 * @param thursday the thursday to set
+	 */
+	public void setThursday(String thursday) {
+		Thursday = thursday;
+	}
+
+	/**
+	 * @return the friday
+	 */
+	public String getFriday() {
+		return Friday;
+	}
+
+	/**
+	 * @param friday the friday to set
+	 */
+	public void setFriday(String friday) {
+		Friday = friday;
 	}
 
 }

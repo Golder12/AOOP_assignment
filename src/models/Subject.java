@@ -2,14 +2,23 @@ package models;
 
 import java.util.List;
 
+/**
+ * 
+ *  This model describes the 'Subject'
+ * entity and the attributes it can hold.
+ * 
+ * The Subject entity represents a 
+ * subject taught in Katikamu primary school
+ *
+ */
 public class Subject {
 
 	
-	private String name;
-	private Teacher subjectTeacher;
-	private StudentClass studentClass;
-	private List<Student> students;
-	private String subjectMark;
+	private String name;				//name of the subject
+	private Teacher subjectTeacher;		//teacher teaching the subject
+	private StudentClass studentClass;	//class in which the subject is taught
+	private List<Student> students;		//students learning the subject
+	private String subjectMark;			//mark being held by a student in the subject
 	
 	public String getName() {
 		return name;
