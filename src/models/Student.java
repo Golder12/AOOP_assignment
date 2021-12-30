@@ -115,7 +115,13 @@ public class Student {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
+<<<<<<< HEAD
+		String toDisplay = lastName + firstName;
+		
+		return toDisplay;
+=======
 		return firstName;
+>>>>>>> e5258a11d0dd28cdf991a303ef4e4ed2f34c8595
 	}
 	
 }

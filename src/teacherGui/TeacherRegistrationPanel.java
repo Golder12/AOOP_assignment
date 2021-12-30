@@ -9,13 +9,18 @@ import javax.swing.JComboBox;
 import models.StudentClass;
 import models.Subject;
 import models.Teacher;
+import services.StudentClassService;
+import services.SubjectService;
 import services.TeacherService;
+import servicesImplementation.StudentClassImplementation;
+import servicesImplementation.SubjectServiceImplementation;
 import servicesImplementation.TeacherImplementation;
 
 import javax.swing.JSeparator;
 import javax.swing.JPasswordField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.util.List;
 import java.awt.event.ActionEvent;
 
 public class TeacherRegistrationPanel extends JPanel {
@@ -110,20 +115,36 @@ public class TeacherRegistrationPanel extends JPanel {
 		panel.add(lblNewLabel_3);
 		
 		JLabel lblNewLabel_5 = new JLabel("Class");
-		lblNewLabel_5.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_5.setHorizontalAlignment(SwingConstants.LEFT);
 		lblNewLabel_5.setBounds(361, 37, 66, 14);
 		panel.add(lblNewLabel_5);
 		
+		StudentClassService studentClass = new StudentClassImplementation();
+		
+		List<StudentClass> classesAvailable = studentClass.getAllStudentClasses();
+		
 		JComboBox<StudentClass> cb1 = new JComboBox<StudentClass>();
+		
+		for(StudentClass studentclass:classesAvailable) {
+			cb1.addItem(studentclass);
+		}
 		cb1.setEditable(false);
 		cb1.setBounds(427, 33, 125, 22);
 		panel.add(cb1);
 		
 		JLabel lblNewLabel_6 = new JLabel("Subject");
-		lblNewLabel_6.setBounds(371, 80, 46, 23);
+		lblNewLabel_6.setBounds(361, 80, 66, 23);
 		panel.add(lblNewLabel_6);
 		
+		SubjectService subject = new SubjectServiceImplementation();
+		
+		List<Subject> subjectsAvailable = subject.getAllSubjects();
+		
 		JComboBox<Subject> cb2 = new JComboBox<Subject>();
+		
+		for(Subject subjectInstance:subjectsAvailable) {
+			cb2.addItem(subjectInstance);
+		}
 		cb2.setBounds(427, 80, 125, 22);
 		panel.add(cb2);
 		
@@ -168,9 +189,11 @@ public class TeacherRegistrationPanel extends JPanel {
 		separator.setBounds(332, 117, 219, 2);
 		panel.add(separator);
 		
-		JSeparator separator_1 = new JSeparator();
-		separator_1.setBounds(294, 11, 1, 185);
-		panel.add(separator_1);
+		JSeparator separator_2 = new JSeparator();
+		separator_2.setOrientation(SwingConstants.VERTICAL);
+		separator_2.setBounds(294, 33, 1, 210);
+		panel.add(separator_2);
 
 	}
 }
+

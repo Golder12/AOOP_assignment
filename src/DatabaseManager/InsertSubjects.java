@@ -11,6 +11,9 @@ public static void main(String args[]) {
 		Connection con = DbConnection.createConnection();
 		try {
 			Statement stmt = con.createStatement();
+<<<<<<< HEAD
+			stmt.executeUpdate(createStudentsTable());
+=======
 			
 			String sql = "INSERT INTO Subjects VALUES ('English')";
 			stmt.executeUpdate(sql);
@@ -21,10 +24,22 @@ public static void main(String args[]) {
 			String sql3 = "INSERT INTO Subjects VALUES ('SocialStudies')";
 			stmt.executeUpdate(sql3);
 			
+>>>>>>> e5258a11d0dd28cdf991a303ef4e4ed2f34c8595
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 		
 	}
 	
+<<<<<<< HEAD
+	public static String createStudentsTable() {
+		
+		String sql = "CREATE TABLE Timetables"+
+					"(studentClass VARCHAR )";
+		
+		return sql;
+	}
+	
+=======
+>>>>>>> e5258a11d0dd28cdf991a303ef4e4ed2f34c8595
 }

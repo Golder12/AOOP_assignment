@@ -7,7 +7,7 @@ public interface TeacherService {
 	void saveTeacher(Teacher teacher);
 	
 	boolean loginTeacher(Teacher teacher);
-	
+
 	
 
 }
