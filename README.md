@@ -20,7 +20,7 @@ MySQL 5.8 was used to develop this application. No issues should arise in the ca
 
 ### Assignment Details
 
-This assignment is meant to have us develop a Java Windows Application to solve issues of Teachers and Students in Katikamu Primary School as highlighted in the assignment.<br/><br/>
+This assignment is meant to have us develop a Java Windows Application to solve issues of Teachers and Students in Katikamu Primary School as highlighted in the assignment.
 
 Teachers' issues will be solved by enabling them to;
 1. Log into the application.
