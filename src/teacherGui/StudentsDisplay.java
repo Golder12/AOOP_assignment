@@ -7,23 +7,22 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableModel;
-import javax.swing.table.TableRowSorter;
 
 import models.Student;
 import services.StudentService;
 import servicesImplementation.StudentImplementation;
 import java.awt.Color;
 import javax.swing.border.LineBorder;
-import javax.swing.event.DocumentEvent;
-import javax.swing.event.DocumentListener;
 import javax.swing.JTextField;
-import javax.swing.RowFilter;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 public class StudentsDisplay extends JPanel {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JTable table;
 	private JTextField searchTextField;
 	
@@ -92,12 +91,10 @@ public class StudentsDisplay extends JPanel {
 			 	public void actionPerformed(ActionEvent e) {
 			 		
 			 		
-					
-						
 						Student registeredStudent = newStudent.getStudentOfRegNo(searchTextField.getText());
 						String columns[] = {"Registration Number","Name","Class"};
 						int numberOfColumns = columns.length;
-						String data1[][] = new String[1][numberOfColumns];
+						String data[][] = new String[1][numberOfColumns];
 						String prefix = "Primary ";
 						
 						

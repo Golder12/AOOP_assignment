@@ -4,34 +4,28 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JButton;
 import javax.swing.JTable;
-import javax.swing.border.LineBorder;
-import javax.swing.event.TableModelEvent;
-import javax.swing.event.TableModelListener;
 import javax.swing.table.DefaultTableModel;
 
-import models.Student;
-import models.Subject;
 import models.Timetable;
 import services.StudentClassService;
-import services.StudentService;
 import services.TimetableService;
 import servicesImplementation.StudentClassImplementation;
-import servicesImplementation.StudentImplementation;
 import servicesImplementation.SubjectServiceImplementation;
 import servicesImplementation.TimetableImplementation;
 
 import java.awt.Color;
-import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JComboBox;
-import javax.swing.SwingConstants;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 public class TeachingTimePanel extends JPanel {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JTable table;
 	static String nameOfTeacherClass = "";
 	static String subject = "";

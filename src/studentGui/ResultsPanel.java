@@ -18,6 +18,11 @@ import java.awt.Font;
 public class ResultsPanel extends JPanel {
 
 	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	/**
 	 * Create the panel.
 	 */
 	public ResultsPanel() {

@@ -1,7 +1,6 @@
 
 package studentGui;
 
-import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.SystemColor;
@@ -12,11 +11,9 @@ import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
-import views_.ViewMarks;
 
 import javax.swing.JButton;
 import javax.swing.JTabbedPane;
-import javax.swing.JSeparator;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.border.LineBorder;
@@ -27,6 +24,10 @@ import servicesImplementation.StudentImplementation;
 
 public class StudentFrame extends JFrame {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	
 	/**

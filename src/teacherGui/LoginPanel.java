@@ -8,7 +8,6 @@ import javax.swing.SwingConstants;
 import models.Teacher;
 import services.TeacherService;
 import servicesImplementation.TeacherImplementation;
-import views_.TeacherHome;
 
 import javax.swing.JTextField;
 import javax.swing.JButton;
@@ -17,6 +16,10 @@ import java.awt.event.ActionEvent;
 import javax.swing.JPasswordField;
 
 public class LoginPanel extends JPanel {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JTextField firstNamelogin;
 	private JPasswordField passwordLogin;
 

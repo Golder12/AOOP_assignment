@@ -25,6 +25,10 @@ import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 
 public class RegisterStudentPanel extends JPanel {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JTextField firstName;
 	private JTextField lastName;
 	private JTextField regNo;

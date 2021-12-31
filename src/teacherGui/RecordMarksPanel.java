@@ -13,7 +13,6 @@ import services.SubjectService;
 import servicesImplementation.StudentImplementation;
 import servicesImplementation.SubjectServiceImplementation;
 
-import javax.swing.ListModel;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
@@ -26,6 +25,10 @@ import javax.swing.DefaultListModel;
 import javax.swing.JButton;
 
 public class RecordMarksPanel extends JPanel {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JTextField classTextField;
 	private JTextField markToSave;
 

@@ -1,6 +1,5 @@
 package studentGui;
 
-import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.EventQueue;
 
@@ -21,6 +20,10 @@ import java.awt.event.ActionEvent;
 
 public class StudentLoginFrame extends JFrame {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTextField regNoTextField;
 	

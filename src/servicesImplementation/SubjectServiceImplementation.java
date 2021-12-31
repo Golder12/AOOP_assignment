@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import DatabaseManager.DbConnection;
-import models.Student;
 import models.Subject;
 import services.SubjectService;
 
@@ -16,6 +15,11 @@ public class SubjectServiceImplementation implements SubjectService{
 	
 	private static Connection con = DbConnection.createConnection();
 
+	
+	/**
+	 * Gets all subjects
+	 * @return a list of subjects
+	 */
 	@Override
 	public List<Subject> getAllSubjects() {
 		
@@ -40,25 +44,16 @@ public class SubjectServiceImplementation implements SubjectService{
 		return allSubjects;
 	}
 
-	@Override
-	public void saveSubject(Subject subject) {
-		Statement st;
-		try {
-			st = con.createStatement();
-			String sql = "INSERT INTO Subjects(name,studentClass) VALUES('" +  subject.getName() + "','" + subject.getStudentClass() + "')";
-			st.executeUpdate(sql);
-			
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		
-	
-		
-	}
-
+	/**
+	 * gets a subject when provided with its name
+	 * 
+	 * 
+	 * @param subjectName
+	 * @return a Subject object
+	 */
 	@Override
 	public Subject getSubjectOfName(String subjectName) {
-try {
+		try {
 			
 			Statement st = con.createStatement();
 			String sql = "SELECT * FROM Subjects WHERE subjectName = '" + subjectName + "'";

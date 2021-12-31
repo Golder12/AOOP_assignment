@@ -11,10 +11,20 @@ import models.Subject;
  */
 public interface SubjectService{
 	
+	/**
+	 * Gets all subjects
+	 * @return a list of subjects
+	 */
 	List<Subject> getAllSubjects();
 	
-	void saveSubject(Subject subject);
 	
+	/**
+	 * gets a subject when provided with its name
+	 * 
+	 * 
+	 * @param subjectName
+	 * @return a Subject object
+	 */
 	Subject getSubjectOfName(String subjectName);
 	
 

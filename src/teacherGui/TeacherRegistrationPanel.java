@@ -24,6 +24,10 @@ import java.util.List;
 import java.awt.event.ActionEvent;
 
 public class TeacherRegistrationPanel extends JPanel {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JTextField firstNameField;
 	private JTextField lastNameField;
 	private JTextField phoneNumberField;

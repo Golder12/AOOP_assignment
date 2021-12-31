@@ -10,8 +10,17 @@ import models.Teacher;
 
 public interface TeacherService {
 	
+	/**
+	 * Saves a teacher
+	 * @param teacher 
+	 */
 	void saveTeacher(Teacher teacher);
 	
+	/**
+	 * Handles logging in a teacher
+	 * @param teacher
+	 * @return a boolean value; true if the teacher has created an account
+	 */
 	boolean loginTeacher(Teacher teacher);
 
 	

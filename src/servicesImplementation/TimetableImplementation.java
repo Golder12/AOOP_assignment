@@ -17,6 +17,12 @@ public class TimetableImplementation implements TimetableService {
 
 	private static Connection con = DbConnection.createConnection();
 	
+	
+	/**
+	 * saves a timetable entry which consists of the time period of teaching,
+	 * the class being taught as well as the subject being taught
+	 * @param timetableEntry
+	 */
 	@Override
 	public void saveTimeTableEntry(Timetable timetableEntry) {
 		
@@ -66,6 +72,11 @@ public class TimetableImplementation implements TimetableService {
 		
 	}
 
+	
+	/**
+	 * Gets all the timetable information that has been recorded
+	 * @return
+	 */
 	@Override
 	public List<Timetable> getTimetableEntriesOfClass() {
 		

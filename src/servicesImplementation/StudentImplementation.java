@@ -22,7 +22,11 @@ public class StudentImplementation implements StudentService {
 	public static String studentClass = "";
 	protected static Student loggedInStudent;
 	
-	
+	/**
+	 *  Saves a student
+	 * @param student
+	 * @throws SQLException
+	 */
 	@Override
 	public void saveStudent(Student student) throws SQLException {
 		
@@ -45,7 +49,11 @@ public class StudentImplementation implements StudentService {
 	
 	}
 
-	
+	/**
+	 * Gets all saved students
+	 * @return
+	 * @throws SQLException
+	 */
 	@Override
 	public List<Student> getAllStudents() throws SQLException {
 		
@@ -68,26 +76,12 @@ public class StudentImplementation implements StudentService {
 		return allStudents;
 	}
 
-	@Override
-	public void showClassTimetable() {
-		// TODO Auto-generated method stub
-		
-	}
 
-
-	@Override
-	public void printAllStudents() throws SQLException {
-	
-		List<Student> students = getAllStudents();
-		
-		for(Student student: students) {
-			System.out.println(student.getFirstName());
-			System.out.println(student.getRegistrationNumber());
-		}
-		
-	}
-
-
+	/**
+	 * Gets Students of a particular class 
+	 * registered for a particular subject
+	 * @return
+	 */
 	@Override
 	public List<Student> getStudentsOfClassAndSubject() {
 	
@@ -116,13 +110,18 @@ public class StudentImplementation implements StudentService {
 			}
 			
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return requiredStudents;
 	}
 
 
+	/**
+	 *  Gets student of a provided registration
+	 * Number
+	 * @param registrationNumber
+	 * @return
+	 */
 	@Override
 	public Student getStudentOfRegNo(String registrationNumber) {
 		
@@ -141,7 +140,6 @@ public class StudentImplementation implements StudentService {
 			}
 			
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
@@ -149,6 +147,11 @@ public class StudentImplementation implements StudentService {
 	}
 
 
+	/**
+	 * Saves a student's mark in a particular 
+	 * subject;
+	 * @param student
+	 */
 	@Override
 	public void saveStudentMark(Student student) {
 		
@@ -161,13 +164,17 @@ public class StudentImplementation implements StudentService {
 			st.executeUpdate(sql);
 		}
 		}catch (SQLException e) {
-		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
 		
 	}
 
 
+	/**
+	 * Handles the logging in of a student
+	 * @param student
+	 * @return a boolean value;  true if the student is registered
+	 */
 	@Override
 	public boolean loginStudent(Student student) {
 		
@@ -206,6 +213,10 @@ public class StudentImplementation implements StudentService {
 	}
 
 
+	/**
+	 *  Gets the subject marks of a student
+	 * @return a list of subjects with a student's marks attached
+	 */
 	@Override
 	public List<Subject> getSubjectMarksOfStudent() {
 		
@@ -240,6 +251,11 @@ public class StudentImplementation implements StudentService {
 	}
 
 
+	/**
+	 * Gets the details of a student who is
+	 * logged in
+	 * @return a student
+	 */
 	@Override
 	public Student getLoggedInStudentDetails() {
 		

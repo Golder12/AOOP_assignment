@@ -5,11 +5,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import javax.swing.JOptionPane;
 
 import DatabaseManager.DbConnection;
-import models.StudentClass;
-import models.Subject;
 import models.Teacher;
 import services.StudentClassService;
 import services.SubjectService;
@@ -22,6 +19,12 @@ public class TeacherImplementation implements TeacherService{
 	SubjectService subjectService = new SubjectServiceImplementation();
 	private static Connection con = DbConnection.createConnection();
 
+	
+
+	/**
+	 * Saves a teacher
+	 * @param teacher 
+	 */
 	@Override
 	public void saveTeacher(Teacher teacher) {
 		
@@ -43,8 +46,14 @@ public class TeacherImplementation implements TeacherService{
 		}
 		
 
-}
+	}
 
+	
+	/**
+	 * Handles logging in a teacher
+	 * @param teacher
+	 * @return a boolean value; true if the teacher has created an account
+	 */
 	@Override
 	public boolean loginTeacher(Teacher teacher) {
 		

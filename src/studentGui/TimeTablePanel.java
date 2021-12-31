@@ -8,13 +8,17 @@ import java.awt.Color;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableModel;
+
 
 import models.Timetable;
 import services.TimetableService;
 import servicesImplementation.TimetableImplementation;
 
 public class TimeTablePanel extends JPanel {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JTable table;
 	static String nameOfStudentClass;
 

@@ -8,21 +8,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 import DatabaseManager.DbConnection;
-import models.Student;
 import models.StudentClass;
-import models.Subject;
 import services.StudentClassService;
 
 public class StudentClassImplementation implements StudentClassService {
 
 	private static Connection con = DbConnection.createConnection();
 	
-	@Override
-	public void saveStudentClass(StudentClassService studentClass) {
-		// TODO Auto-generated method stub
-		
-	}
-
+	/**
+	 * Returns student classes 
+	 * @return a list of student classes
+	 */
 	@Override
 	public List<StudentClass> getAllStudentClasses() {
 		List<StudentClass> allStudentClasses = new ArrayList<>();
@@ -45,6 +41,13 @@ public class StudentClassImplementation implements StudentClassService {
 		return allStudentClasses;
 	}
 
+	
+	/**
+	 * This method gets a certain studentClass object
+	 * when provided with a name
+	 * @param studentClassName
+	 * @return a student class
+	 */
 	@Override
 	public StudentClass getClassOfName(String studentClassName) {
 		try {
