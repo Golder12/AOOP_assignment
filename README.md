@@ -95,6 +95,7 @@ Run the 'CreateDatabaseAndTables' file. The database structure and data for the 
 One is not yet able to filter records
 There are some validations missing.
 One is only able to receive error messages through the console
+A teacher is able to take over another teacher's timetable space
 
 ## Conclusion
 
