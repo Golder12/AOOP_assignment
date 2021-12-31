@@ -1,7 +1,4 @@
 # AOOP_assignment
-<<<<<<< HEAD
-Java Swing + JDBC
-=======
 
 This assignment involves the use of Java with Swing and JDBC for database connectivity.
 
@@ -42,7 +39,22 @@ Students' issues will be solved by enabling them to;
 
 ### Models Involved
 
+The major models involved that result into database tables include;
+1. Students.
+2. StudentClass.
+3. Timetables.
+4. Subjects.
+5. Teachers.
+
+Some of the relationships between the above models are derived into associative tables that include;
+1. SubjectsClass. It stands in for the many to many relationship between the StudentClass and Subjects model.
+2. StudentsSubjectsClass. It stores marks that are attached to a specific Student, StudentClass and Subject.
+
 ### Database Design
+
+The Database Design below describes the relationships of the above models:
+
+![DB Design](DB.png "Database Design")
 
 ## How to Run it
 
@@ -51,4 +63,3 @@ Students' issues will be solved by enabling them to;
 ## Conclusion
 
 All work in this repository was entirely a group effort and each member of the group was able to commit what they had worked on either individually or as a group. Commits might seem inconsistent, but this is only because physical meet ups were scheduled for most of the development. These meet ups involved [pair programming](https://en.wikipedia.org/wiki/Pair_programming) from which the end result was mostly code on one individual's computer. However, it was ensured that every member was fully involved and understood how the development came along. 
->>>>>>> e5258a11d0dd28cdf991a303ef4e4ed2f34c8595

@@ -1,11 +1,9 @@
-
-.idea
 .git
-.classpath
-.project
-.settings
-
 bin/
 .idea/
 .settings/
+.classpath
+.project
+*.iml
+
 
