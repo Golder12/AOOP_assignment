@@ -196,3 +196,4 @@ public class TeacherRegistrationPanel extends JPanel {
 
 	}
 }
+
