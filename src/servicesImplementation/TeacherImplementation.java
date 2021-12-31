@@ -5,15 +5,21 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import javax.swing.JOptionPane;
+
 import DatabaseManager.DbConnection;
+import models.StudentClass;
 import models.Subject;
 import models.Teacher;
+import services.StudentClassService;
+import services.SubjectService;
 import services.TeacherService;
 
 public class TeacherImplementation implements TeacherService{
 	
 	protected static Teacher loggedInTeacher;
-	
+	StudentClassService studentClassService = new StudentClassImplementation();
+	SubjectService subjectService = new SubjectServiceImplementation();
 	private static Connection con = DbConnection.createConnection();
 
 	@Override
@@ -33,7 +39,6 @@ public class TeacherImplementation implements TeacherService{
 			st.executeUpdate(sql);			
 			
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
@@ -56,6 +61,11 @@ public class TeacherImplementation implements TeacherService{
 			while(rs.next()) {
 				String recordedFirstName = rs.getString("firstName");
 				String recordedPassword = rs.getString("password");
+				String teacherOfClass = rs.getString("studentClass");
+				String subjectTaught = rs.getString("SubjectTaught");
+				
+				teacher.setStudentClass(studentClassService.getClassOfName(teacherOfClass));
+				teacher.setSubject(subjectService.getSubjectOfName(subjectTaught));
 				
 				if(trialFirstName.equals(recordedFirstName))
 					if(trialPassword.equals(recordedPassword)) {
@@ -66,14 +76,11 @@ public class TeacherImplementation implements TeacherService{
 						}
 						return true;
 					}
-				
 			}		
-			
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			e.printStackTrace(); 
 		}
-		
 		return false;
 	}
+
 }

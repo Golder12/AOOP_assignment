@@ -39,7 +39,6 @@ public class StudentClassImplementation implements StudentClassService {
 				allStudentClasses.add(subject);
 			}		
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		

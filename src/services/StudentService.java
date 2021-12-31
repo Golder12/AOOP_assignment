@@ -26,6 +26,7 @@ public interface StudentService {
 	
 	List<Subject> getSubjectMarksOfStudent();
 	
+	Student getLoggedInStudentDetails();
 	
 
 }

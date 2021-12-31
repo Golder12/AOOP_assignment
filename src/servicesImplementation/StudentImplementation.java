@@ -59,6 +59,7 @@ public class StudentImplementation implements StudentService {
 			Student student = new Student();
 			student.setFirstName(rs.getString("firstName"));
 			student.setLastName(rs.getString("lastName"));
+			student.setStudentClass(studentClassService.getClassOfName(rs.getString("studentClass")));
 			student.setRegistrationNumber(rs.getString("registrationNumber"));
 			allStudents.add(student);
 		}		
@@ -157,7 +158,6 @@ public class StudentImplementation implements StudentService {
 		Statement st = con.createStatement();
 		for(Subject subject:subjects) {
 			String sql = "UPDATE StudentsSubjectsClass SET StudentMark = '" + subject.getSubjectMark() + "' WHERE studentRegNo = '" + student.getRegistrationNumber() + "' AND SubjectName = '" + subject.getName() + "'" ;
-			System.out.println(subject.getSubjectMark());
 			st.executeUpdate(sql);
 		}
 		}catch (SQLException e) {
@@ -237,6 +237,19 @@ public class StudentImplementation implements StudentService {
 		}
 		
 		return studentSubjects;
+	}
+
+
+	@Override
+	public Student getLoggedInStudentDetails() {
+		
+		Student student = new Student();
+		student.setFirstName(loggedInStudent.getFirstName());
+		student.setLastName(loggedInStudent.getLastName());
+		student.setRegistrationNumber(loggedInStudent.getRegistrationNumber());
+		student.setStudentClass(loggedInStudent.getStudentClass());
+		
+		return student;
 	}
 
 }
