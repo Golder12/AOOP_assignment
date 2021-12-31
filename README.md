@@ -37,6 +37,27 @@ Students' issues will be solved by enabling them to;
 
 ### File Structure
 
+There are five packages in the project's source folder namely:-
+1. DatabaseManager
+	This contains files needed to set up the database
+
+2. Models
+	This contains files describing the different entities used in our application
+
+3. Services
+	This contains the interfaces states the different methods that can be carried out by and on our entities in the application
+
+4. ServicesImplementation
+	This contains files that have the definitions for the different methods that can be carried out by and on our entities in the application
+
+5. StudentGui
+	This package contains all the frontend components and layout for the student side of the application
+
+6. TeacherGui
+	This package contains all the frontend components and layout for the teacher side of the application
+
+
+
 ### Models Involved
 
 The major models involved that result into database tables include;
@@ -58,7 +79,22 @@ The Database Design below describes the relationships of the above models:
 
 ## How to Run it
 
+Proceed to the rms_Application package and run the MainFrame.java file.
+
+### (A) Setting up the Database
+
+#### 1 . Your credentials
+
+Proceed to the 'DatabaseManager' package. Edit the two methods in the DatabaseConnection file with your mysql credentials.
+
+#### 2. Creating the database and tables
+
+Run the 'CreateDatabaseAndTables' file. The database structure and data for the successful running of the application will be created for you.
+
 ## Issues/Concerns
+One is not yet able to filter records
+There are some validations missing.
+One is only able to receive error messages through the console
 
 ## Conclusion
 
