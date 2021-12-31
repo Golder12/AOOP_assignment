@@ -1,34 +1,28 @@
 package models;
 
-import java.util.List;
 
+
+/**
+ * 
+ *  This model describes the 'Teacher'
+ * entity and the attributes it can hold.
+ * 
+ * The Teacher entity represents a 
+ * teacher in Katikamu primary school
+ *
+ */
 public class Teacher {
 	
-	private String firstName;
-	private String lastName;
-	private Subject subject;
-	private StudentClass studentClass;
-	private String phoneNumber;
-	private String password;
+	private String firstName; 			//first name of the teacher
+	private String lastName; 			//last name of the teacher
+	private Subject subject; 			//subject the teacher teaches
+	private StudentClass studentClass; 	//class the teacher teaches
+	private String phoneNumber; 		//phoneNumber of the teacher
+	private String password; 			//password set by the teacher
 	
 	
 	
-	public String getFirstName() {
-		return firstName;
-	}
 	
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-	
-	public String getLastName() {
-		return lastName;
-	}
-	
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
 	/**
 	 * @return the password
 	 */
@@ -83,6 +77,34 @@ public class Teacher {
 	 */
 	public void setSubject(Subject subject) {
 		this.subject = subject;
+	}
+
+	/**
+	 * @return the firstName
+	 */
+	public String getFirstName() {
+		return firstName;
+	}
+
+	/**
+	 * @param firstName the firstName to set
+	 */
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	/**
+	 * @return the lastName
+	 */
+	public String getLastName() {
+		return lastName;
+	}
+
+	/**
+	 * @param lastName the lastName to set
+	 */
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
 
 	
