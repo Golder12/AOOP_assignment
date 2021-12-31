@@ -14,6 +14,7 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JPasswordField;
+import java.awt.Font;
 
 public class LoginPanel extends JPanel {
 	/**
@@ -36,18 +37,21 @@ public class LoginPanel extends JPanel {
 		add(panel_2);
 		
 		JLabel lblNewLabel_1 = new JLabel("RESULT MANAGEMENT SYSTEM");
+		lblNewLabel_1.setFont(new Font("Tahoma", Font.BOLD, 15));
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_1.setForeground(Color.WHITE);
 		lblNewLabel_1.setBounds(164, 0, 468, 38);
 		panel_2.add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_2 = new JLabel("KATIKAMU");
+		lblNewLabel_2.setFont(new Font("Tahoma", Font.BOLD, 11));
 		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_2.setForeground(Color.WHITE);
 		lblNewLabel_2.setBounds(0, 0, 154, 20);
 		panel_2.add(lblNewLabel_2);
 		
 		JLabel lblPrimarySchool = new JLabel("PRIMARY SCHOOL");
+		lblPrimarySchool.setFont(new Font("Tahoma", Font.BOLD, 11));
 		lblPrimarySchool.setHorizontalAlignment(SwingConstants.CENTER);
 		lblPrimarySchool.setForeground(Color.WHITE);
 		lblPrimarySchool.setBounds(0, 29, 154, 9);

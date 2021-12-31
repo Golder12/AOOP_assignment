@@ -29,6 +29,7 @@ public class MainFrame extends JFrame {
 	 * Create the frame.
 	 */
 	public MainFrame() {
+		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100,  734,  500);
 		contentPane = new JPanel();
@@ -70,6 +71,7 @@ public class MainFrame extends JFrame {
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				new TeacherLoginFrame().setVisible(true);
+				new StudentLoginFrame().setVisible(false);
 			}
 		});
 		btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 11));
@@ -80,6 +82,7 @@ public class MainFrame extends JFrame {
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				new StudentLoginFrame().setVisible(true);
+				new TeacherLoginFrame().setVisible(false);
 			}
 		});
 		btnNewButton_1.setFont(new Font("Tahoma", Font.BOLD, 11));
