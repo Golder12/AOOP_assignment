@@ -14,7 +14,7 @@ public class DbConnection {
 		try {
 			
 			Class.forName("com.mysql.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost/RMS?autoReconnect=true&useSSL=false", "root", "dokigolder");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost/RMS_J?autoReconnect=true&useSSL=false", "root", "dokigolder");
 			return con;
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
